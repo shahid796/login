@@ -1,0 +1,12 @@
+<p>register works!</p>
+
+<label for="">
+    username
+</label><br>
+<input type="text" class="form-control mr-sm-2" name="username" [(ngModel)]="model.username"><br>
+<label for="">
+    password
+</label><br>
+<input type="text" class="form-control mr-sm-2" name="password" [(ngModel)]="model.password"><br>
+<button class="btn btn-primary" (click)="save()">login</button>
+<button class="btn btn-warning" (click)="back()">signup</button>

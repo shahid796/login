@@ -1,0 +1,43 @@
+<p>entry works!</p>
+<form action="">
+<label for="">username</label><br>
+<input type="text" class="form-control mr-sm-2" name="username" [(ngModel)]="model.username"><br>
+<label for="">password</label><br>
+<input type="text" class="form-control mr-sm-2" name="password" [(ngModel)]="model.password"><br>
+<label for="">email</label><br>
+<input type="text" class="form-control mr-sm-2" name="email" [(ngModel)]="model.email"><br>
+<label for="">mobile</label><br>
+<input type="text"class="form-control mr-sm-2"  name="mobile" [(ngModel)]="model.mobile"><br>
+</form>
+<button class="btn btn-danger" (click)="save()">register</button>
+<button class="btn btn-warning" (click)="back()">login</button>
+<style>
+    table,th,td{
+      border: 1px solid black;
+      border-collapse: collapse;
+      padding: 5px;
+    }
+  </style>
+ <table border="1px" style="width: 100;">
+   <thead>
+     <tr style="background-color: darkkhaki;">
+       <th>id</th>
+       <th>username</th>
+       <th>password</th>
+       <th>email</th>
+       <th>mobile</th>
+       <th>edit</th>
+       <th>delete</th>
+
+     </tr>
+     <tr *ngFor="let arr of userlist" style="background-color: darkslategray;">
+       <td>{{arr.id}}</td>
+       <td>{{arr.username}}</td>
+       <td>{{arr.password}}</td>
+       <td>{{arr.email}}</td>
+       <td>{{arr.mobile}}</td>
+       <td><button class="btn btn-primary" (click)="edit(arr)">update</button></td>
+       <td><button class="btn btn-danger" (click)="delete(arr)">delete</button></td>
+     </tr>
+
+   </thead>
